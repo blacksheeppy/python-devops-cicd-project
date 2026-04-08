@@ -18,3 +18,11 @@ jobs:
       - name: Display Python version and location
         run: |
           python --version
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ".[dev]"
+      - name: Linting and format checks
+        run: |
+          ruff check .
+          black --check .
