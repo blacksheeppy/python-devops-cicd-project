@@ -56,7 +56,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - tests
-      - lint-static-checks tests
+      - lint-static-checks
     steps:
       - name: Release
         run: echo "Release"
