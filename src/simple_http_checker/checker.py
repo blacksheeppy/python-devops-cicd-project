@@ -37,7 +37,7 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
             status = "CONNECTION ERROR"
             logger.error(f"Connection error for {url}.")
         except requests.exceptions.RequestException as e:
-            status = f"REQUEST_ERROR {type(e).__name__}"
+            status = f"REQUEST_ERROR: {type(e).__name__}"
             logger.error(
                 f"An unexpected request error occurred for{url}:{e}", exc_info=True
             )
