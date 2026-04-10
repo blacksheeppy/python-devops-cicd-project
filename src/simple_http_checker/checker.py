@@ -44,4 +44,5 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
         results[url] = status
         logger.debug(f"Checked: {url:<40} {status}")
     logger.info("Check completed")
+    my_log = False
     return results
