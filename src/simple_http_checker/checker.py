@@ -42,6 +42,7 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
                 f"An unexpected request error occurred for{url}:{e}", exc_info=True
             )
         results[url] = status
+
         logger.debug(f"Checked: {url:<40} {status}")
     logger.info("Check completed")
     return results
